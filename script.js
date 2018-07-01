@@ -29,10 +29,17 @@ function callLambda(participantID) {
 
         if (r.status != 200) {
             displayError();
-            setButtonInactive("submitID")
+            setButtonActive("submitID");
         }
 
         result = JSON.parse(r.responseText);
+
+        if (result.voucher == "TODO") {
+            displayNotYet();
+            setButtonActive("submitID");
+            return;
+        }
+
         console.log(result);
         displayDonation(result);
         setButtonActive("submitID")
@@ -72,10 +79,18 @@ function displayVoucher(result) {
     `
     addRow(resultContent);
 }
+
 function displayError() {
     let resultContent = `      
         There was an error retrieving your results. Please make sure you entered the correct code. <br>
         The code consists of 2 letters and 5 numbers, for example ab12345
+    `
+    addRow(resultContent);  
+}
+
+function displayNotYet() {
+    let resultContent = `      
+        We are sorry but your results are not in yet, please try again in a couple of days.
     `
     addRow(resultContent);  
 }
