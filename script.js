@@ -68,7 +68,7 @@ function addRow(contentString) {
 function displayDonation(result) {
     let resultContent = `      
         <b>Donated amount:</b> ${result.donated_amount}  to charity ${result.charity}<br>
-        <b>Full list of donations:</b> <br>
+        <b>Full list of donations:</b> <a href=https://goo.gl/B6j84d target=_blank">https://goo.gl/B6j84d</a> <br>
     `
     addRow(resultContent);
 }
@@ -90,7 +90,7 @@ function displayError() {
 
 function displayNotYet() {
     let resultContent = `      
-        We are sorry but your results are not in yet, please try again in a couple of days.
+        Your results are not yet available, please try again in a couple of days.
     `
     addRow(resultContent);  
 }
