@@ -66,7 +66,9 @@ function addRow(contentString) {
 }
 
 function displayDonation(result) {
-    let resultContent = `      
+    let resultContent = `    
+        <b>Session time: </b> ${result.session_time} <br>
+        <b>Session ID: </b> ${result.session_id} <br>
         <b>Donated amount:</b> ${result.donated_amount}  to charity ${result.charity}<br>
         <b>Full list of donations:</b> <a href=https://goo.gl/B6j84d target=_blank">https://goo.gl/B6j84d</a> <br>
     `
@@ -75,7 +77,7 @@ function displayDonation(result) {
 
 function displayVoucher(result) {
     let resultContent = `      
-        <b>Your voucher code on Amazon:</b> ${result.voucher}<br>
+        <b>Your Amazon.de gift voucher code:</b> ${result.voucher}<br>
     `
     addRow(resultContent);
 }
