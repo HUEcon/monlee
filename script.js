@@ -69,7 +69,7 @@ function displayDonation(result) {
     let resultContent = `    
         <b>Session time: </b> ${result.session_time} <br>
         <b>Session ID: </b> ${result.session_id} <br>
-        <b>Donated amount:</b> ${result.donated_amount}  to charity ${result.charity}<br>
+        <b>Donated amount:</b> ${result.donated_amount}€ to charity ${result.charity}<br>
         <b>Full list of donations:</b> <a href=https://goo.gl/B6j84d target=_blank">https://goo.gl/B6j84d</a> <br>
     `
     addRow(resultContent);
