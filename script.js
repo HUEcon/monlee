@@ -31,7 +31,7 @@ function callArray(participantID) {
             }
         })
         var participantData = resultDict[participantID];
-        if (participantData.status == "todo\r") {
+        if (participantData.status === "todo\r") {
             displayNotYet();
             setButtonActive("submitID");
             return;
